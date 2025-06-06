@@ -1,0 +1,11 @@
+[project]
+name = "vrrp-hijacker"
+version = "1.0"
+description = "VRRP sniffing and exploitation tool"
+dependencies = ["scapy"]
+
+[project.scripts]
+vrrp-hijacker = "vrrp_hijacker.__main__:main"
+
+[tool.setuptools]
+packages = ["vrrp_hijacker"]
