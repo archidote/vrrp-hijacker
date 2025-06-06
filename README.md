@@ -50,12 +50,7 @@ python -m venv venv source venv/bin/activate
 pip install -r requirements.txt
 python vrrp_hijacker/__main__.py --help 
 ```
-
-<<<<<<< HEAD
-# Usage 
-=======
 # ⚙️ Usage 
->>>>>>> 97250dc (v1.0 - docs)
 
 **VRRP-Hijacker requires root privileges to perform actions such as sniffing and crafting custom VRRP packets.**  
 Most of the time, you will need to run the command with `sudo`.
