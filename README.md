@@ -62,11 +62,28 @@ To fix this, you need to update your `sudo` secure path.
 
 1.  Open the sudoers file with `visudo`:
     
-`sudo visudo` 
+```sudo visudo``` 
     
 2.  Add this line at the bottom (replace `$YOUR_USERNAME` with your actual username):
     
-`Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/$YOUR_USERNAME/.local/bin"` 
+```bash
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/$YOUR_USERNAME/.local/bin"
+```
     
 
 ✅ This ensures that `sudo vrrp-hijacker` will work without needing to specify the full path.
+
+```
+gsb@computer ~/vrrp-Hijacker (main*) $ vrrp-hijacker --help 
+usage: vrrp-hijacker [-h] {sniff,exploit,arp} ...
+
+positional arguments:
+  {sniff,exploit,arp}
+    sniff              Monitor your network for detecting VRRP traffic
+    exploit            Exploit VRRP (Layer 3)
+    arp                Send gratuitous ARP packets (Layer 2)
+
+options:
+  -h, --help           show this help message and exit
+
+```
